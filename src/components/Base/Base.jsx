@@ -23,7 +23,7 @@ const Base = ({addBase, salad}) => {
 			{salad.base && (
 				<div>
 					<Link to="/toppings">
-						<button className="next_button">Next</button>
+						<button className="base_next_button">Next</button>
 					</Link>
 				</div>
 			)}

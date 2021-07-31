@@ -1,4 +1,4 @@
-.base_container {
+.seasonings_container {
 	width: 100vw;
 	height: 60vh;
 	display: flex;
@@ -7,7 +7,12 @@
 	flex-direction: column;
 }
 
-.base_listing {
+.seasonings_options > * {
+	margin-bottom: .5em;
+	cursor: pointer;
+}
+
+.seasonings_listing {
 	color: rgba(0, 0, 0, 0.25);
 	list-style-type: none;
 	font-family: "Roboto";
@@ -15,25 +20,7 @@
 	font-size: 2em;
 }
 
-.active {
-	color: rgba(0, 0, 0, 1);
-}
-
-.heading {
-	font-size: 2.5em;
-	margin-bottom: .5em;
-}
-
-.base_options > * {
-	margin-bottom: .5em;
-	cursor: pointer;
-}
-
-ul {
-	padding: 0;
-}
-
-.base_next_button {
+.seasonings_next_button {
 	padding: 1em;
 	background-color: transparent;
 	color: black;
@@ -45,6 +32,6 @@ ul {
 	position: absolute;
 	left: 0;
 	right: 0;
-	bottom: 35%;
+	bottom: 27.5%;
 	margin: auto;
 }
