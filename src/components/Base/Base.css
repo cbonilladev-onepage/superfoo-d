@@ -1,0 +1,50 @@
+.base_container {
+	width: 100vw;
+	height: 60vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+}
+
+.base_listing {
+	color: rgba(0, 0, 0, 0.25);
+	list-style-type: none;
+	font-family: "Roboto";
+	font-weight: 700;
+	font-size: 2em;
+}
+
+.active {
+	color: rgba(0, 0, 0, 1);
+}
+
+.heading {
+	font-size: 2.5em;
+	margin-bottom: .5em;
+}
+
+.base_options > * {
+	margin-bottom: .5em;
+	cursor: pointer;
+}
+
+ul {
+	padding: 0;
+}
+
+.next_button {
+	padding: 1em;
+	background-color: transparent;
+	color: black;
+	border: 5px solid black;
+	cursor: pointer;
+	font-family: "Roboto";
+	font-weight: 700;
+	width: 200px;
+	position: absolute;
+	left: 0;
+	right: 0;
+	bottom: 35%;
+	margin: auto;
+}

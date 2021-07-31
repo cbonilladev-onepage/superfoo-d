@@ -1,0 +1,41 @@
+svg {
+	width: 50px;
+	margin-left: 2em;
+}
+
+.container {
+	display: flex;
+	justify-content: space-between;
+	margin: 2em;
+	/* position: absolute; */
+}
+
+.links {
+	display: flex;
+	font-family: 'Roboto';
+	font-weight: 700;
+	cursor: pointer;
+	align-items: center;
+	font-size: 1em;
+}
+
+.links>* {
+	margin-right: 3em;
+	list-style-type: none;
+	color: black;
+	text-decoration: none;
+}
+
+.links>*:hover {
+	color: rgb(75, 75, 75);
+}
+
+.logo {
+	display: flex;
+	align-items: center;
+}
+
+.logo>h2 {
+	margin-left: 1em;
+	cursor: default;
+}

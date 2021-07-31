@@ -1,23 +1,45 @@
-import logo from './logo.svg';
+import { useState } from 'react';
+import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import './App.css';
+import Base from './components/Base/Base';
+import Header from './components/Header/Header';
+import Home from './components/Home/Home';
 
 function App() {
+  const [salad, setSalad] = useState({ base: "", toppings: [], seasoning: [] })
+
+  const addBase = (base) => {
+    setSalad({ ...salad, base })
+  }
+
+  const addTopping = (topping) => {
+    let newTopping;
+    if (!salad.toppings.includes(topping)) {
+      newTopping = [...salad.toppings, topping]
+    } else {
+      newTopping = salad.toppings.filter(listing => listing !== topping)
+    }
+  }
+
+  const addSeasoning = (seasoning) => {
+    let newSeasoning;
+    if (!salad.toppings.includes(seasoning)) {
+      newSeasoning = [...salad.seasonings, seasoning]
+    } else {
+      newSeasoning = salad.seasonings.filter(listing => listing !== seasoning)
+    }
+  }
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <BrowserRouter>
+      <Header />
+        <Switch>
+          <Route path="/" exact><Home /></Route>
+          <Route path="/base"><Base addBase={addBase} salad={salad}/></Route>
+          <Route path="/" render={() => <h2>What are you doing?</h2>} />
+        </Switch>
+      </BrowserRouter>
     </div>
   );
 }
