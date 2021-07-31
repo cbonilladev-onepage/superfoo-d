@@ -40,12 +40,12 @@ function App() {
       <BrowserRouter>
       <Header />
         <Switch>
-          <Route path="/" exact><Home /></Route>
-          <Route path="/base"><Base addBase={addBase} salad={salad}/></Route>
-          <Route path="/toppings"><Toppings addTopping={addTopping} salad={salad}/></Route>
-          <Route path="/seasonings"><Seasonings addSeasoning={addSeasoning} salad={salad}/></Route>
-          <Route path="/order"><Order salad={salad}/></Route>
-          <Route path="/" render={() => <h2>What are you doing?</h2>} />
+          <Route path={process.env.PUBLIC_URL + "/"} exact><Home /></Route>
+          <Route path={process.env.PUBLIC_URL + "/base"}><Base addBase={addBase} salad={salad}/></Route>
+          <Route path={process.env.PUBLIC_URL + "/toppings"}><Toppings addTopping={addTopping} salad={salad}/></Route>
+          <Route path={process.env.PUBLIC_URL + "/seasonings"}><Seasonings addSeasoning={addSeasoning} salad={salad}/></Route>
+          <Route path={process.env.PUBLIC_URL + "/order"}><Order salad={salad}/></Route>
+          <Route path={process.env.PUBLIC_URL + "/"} render={() => <h2>What are you doing?</h2>} />
         </Switch>
       </BrowserRouter>
     </div>

@@ -21,7 +21,7 @@ const Toppings = ({salad, addTopping}) => {
 
 			{salad.toppings && (
 				<div>
-					<Link to="/seasonings">
+					<Link to={process.env.PUBLIC_URL + "/seasonings"}>
 						<button className="toppings_next_button">Next</button>
 					</Link>
 				</div>

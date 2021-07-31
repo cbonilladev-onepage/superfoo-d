@@ -9,7 +9,7 @@ const Home = () => {
 				<h2 className="splash_text">Salad,</h2>
 				<h2 className="splash_text"><span className="live_text"></span></h2>
 			</div>
-				<Link to="/base">
+				<Link to={process.env.PUBLIC_URL + "/base"}>
 					<button className="splash_button">Order Now</button>
 				</Link>
 		</div>

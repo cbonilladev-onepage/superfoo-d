@@ -22,7 +22,7 @@ const Base = ({addBase, salad}) => {
 
 			{salad.base && (
 				<div>
-					<Link to="/toppings">
+					<Link to={process.env.PUBLIC_URL + "/toppings"}>
 						<button className="base_next_button">Next</button>
 					</Link>
 				</div>

@@ -17,7 +17,7 @@ const Order = ({ salad }) => {
 			</div>
 
 			<div>
-				<a href="/">
+				<a href={process.env.PUBLIC_URL + "/"}>
 					<button className="order_next_button">Order Now</button>
 				</a>
 			</div>
