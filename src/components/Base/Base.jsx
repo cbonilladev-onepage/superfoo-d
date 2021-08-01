@@ -1,3 +1,4 @@
+import { motion } from 'framer-motion'
 import React from 'react'
 import { Link } from 'react-router-dom'
 import './Base.css'
@@ -6,7 +7,7 @@ const Base = ({addBase, salad}) => {
 	const bases = ['Arugula', 'Lettuce', 'Spinach']
 
 	return (
-		<div className="base_container">
+		<motion.div initial={{x: '-100vw'}} animate={{x: 0}} className="base_container">
 			<h3 className="heading">Step 1: Choose Your Base</h3>
 
 			<ul className="base_options">
@@ -23,11 +24,11 @@ const Base = ({addBase, salad}) => {
 			{salad.base && (
 				<div>
 					<Link to={process.env.PUBLIC_URL + "/toppings"}>
-						<button className="base_next_button">Next</button>
+						<motion.button initial={{scale: 1.1}} animate={{scale: 1}} whileHover={{scale: 1.1}} className="base_next_button">Next</motion.button>
 					</Link>
 				</div>
 			)}
-		</div>
+		</motion.div>
 	)
 }
 

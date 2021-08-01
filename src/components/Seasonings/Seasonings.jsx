@@ -1,3 +1,4 @@
+import { motion } from 'framer-motion'
 import React from 'react'
 import { Link } from 'react-router-dom'
 import './Seasonings.css'
@@ -6,7 +7,7 @@ const Seasonings = ({salad, addSeasoning}) => {
 	let seasonings = ['Salt', 'Lemon', 'Pepper', 'Chile', 'Vinegar']
 
 	return (
-		<div className="seasonings_container">
+		<motion.div initial={{x: "-100vw"}} animate={{x: 0}} className="seasonings_container">
 			<h3 className="heading">Step 3: Choose Your Seasoning</h3>
 			<ul className="seasonings_options">
 				{seasonings.map(seasoning => {
@@ -22,11 +23,11 @@ const Seasonings = ({salad, addSeasoning}) => {
 			{salad.toppings && (
 				<div>
 					<Link to={process.env.PUBLIC_URL + "/order"}>
-						<button className="seasonings_next_button">Next</button>
+						<motion.button whileHover={{scale: 1.1}} className="seasonings_next_button">Next</motion.button>
 					</Link>
 				</div>
 			)}
-		</div>
+		</motion.div>
 	)
 }
 

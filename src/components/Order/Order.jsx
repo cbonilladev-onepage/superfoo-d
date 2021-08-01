@@ -1,9 +1,10 @@
+import { motion } from 'framer-motion'
 import React from 'react'
 import './Order.css'
 
 const Order = ({ salad }) => {
 	return (
-		<div className="order_container">
+		<motion.div initial={{x: "-100vw"}} animate={{x: 0}} className="order_container">
 			<h3 className="heading">Here's Your Order!</h3>
 			<p>Alright, let's see. You're ordering a(n):</p>
 			<div className="order_listing">{salad.base}</div>
@@ -18,10 +19,10 @@ const Order = ({ salad }) => {
 
 			<div>
 				<a href={process.env.PUBLIC_URL + "/"}>
-					<button className="order_next_button">Order Now</button>
+					<motion.button whileHover={{scale: 1.1}} className="order_next_button">Order Now</motion.button>
 				</a>
 			</div>
-		</div>
+		</motion.div>
 	)
 }
 

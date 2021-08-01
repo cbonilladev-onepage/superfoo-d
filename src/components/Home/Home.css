@@ -36,7 +36,7 @@ body {
 }
 
 .splash_button {
-	left: 0;
+	left: -1em;
 	right: 0;
 	margin: auto;
 	position: absolute;
@@ -48,7 +48,7 @@ body {
 	font-family: "Roboto";
 	font-weight: 700;
 	width: 200px;
-	top: 55vh;
+	top: 56vh;
 }
 
 .live_text::before {
