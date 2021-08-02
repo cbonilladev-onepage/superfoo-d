@@ -13,9 +13,9 @@ const Seasonings = ({salad, addSeasoning}) => {
 				{seasonings.map(seasoning => {
 					let spanClass = salad.seasonings.includes(seasoning) ? 'active' : '';
 					return (
-						<li key={seasoning} className="seasonings_listing" onClick={() => addSeasoning(seasoning)}>
+						<motion.li key={seasoning} whileHover={{scale: 1.1}} transition={{type:'spring', stiffness: 300}} className="seasonings_listing" onClick={() => addSeasoning(seasoning)}>
 							<span className={spanClass}>{seasoning}</span>
-						</li>
+						</motion.li>
 					)
 				})}
 			</ul>

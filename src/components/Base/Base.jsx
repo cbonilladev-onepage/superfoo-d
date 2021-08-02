@@ -6,17 +6,28 @@ import './Base.css'
 const Base = ({addBase, salad}) => {
 	const bases = ['Arugula', 'Lettuce', 'Spinach']
 
+	const containerVariants = {
+		hidden: {
+			opacity: 0,
+			x: '-100vw'
+		},
+		visible: {
+			opacity: 1,
+			x: 0
+		}
+	}
+
 	return (
-		<motion.div initial={{x: '-100vw'}} animate={{x: 0}} className="base_container">
+		<motion.div variants={containerVariants} initial="hidden" animate="visible" className="base_container">
 			<h3 className="heading">Step 1: Choose Your Base</h3>
 
 			<ul className="base_options">
 				{bases.map((base) => {
 					let spanClass = salad.base === base ? 'active' : '';
 					return (
-						<li key="base" className="base_listing" onClick={() => addBase(base)}>
+						<motion.li whileHover={{scale: 1.1}} transition={{type:'spring', stiffness: 300}} key="base" className="base_listing" onClick={() => addBase(base)}>
 							<span className={spanClass}>{ base }</span>
-						</li>
+						</motion.li>
 					)
 				})}
 			</ul>

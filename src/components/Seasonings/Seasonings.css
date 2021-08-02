@@ -12,6 +12,12 @@
 	cursor: pointer;
 }
 
+.seasonings_options {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
 .seasonings_listing {
 	color: rgba(0, 0, 0, 0.25);
 	list-style-type: none;
