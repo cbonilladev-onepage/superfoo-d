@@ -6,8 +6,23 @@ import './Seasonings.css'
 const Seasonings = ({salad, addSeasoning}) => {
 	let seasonings = ['Salt', 'Lemon', 'Pepper', 'Chile', 'Vinegar']
 
+	const containerVariants = {
+		hidden: {
+			opacity: 0,
+			x: '-100vw'
+		},
+		visible: {
+			opacity: 1,
+			x: 0,
+			transition: {
+				type: 'spring',
+				duration: .5
+			}
+		}
+	}
+
 	return (
-		<motion.div initial={{x: "-100vw"}} animate={{x: 0}} className="seasonings_container">
+		<motion.div variants={containerVariants} initial="hidden" animate="visible" className="seasonings_container">
 			<h3 className="heading">Step 3: Choose Your Seasoning</h3>
 			<ul className="seasonings_options">
 				{seasonings.map(seasoning => {

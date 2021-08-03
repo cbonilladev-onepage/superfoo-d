@@ -6,8 +6,23 @@ import './Toppings.css';
 const Toppings = ({salad, addTopping}) => {
 	let toppings = ['Radish', 'Tomatoes', 'Cucumber', 'Onion', 'Carrot', 'Bell Pepper']
 
+	const containerVariants = {
+		hidden: {
+			opacity: 0,
+			x: '-100vw'
+		},
+		visible: {
+			opacity: 1,
+			x: 0,
+			transition: {
+				type: 'spring',
+				duration: .5
+			}
+		}
+	}
+
 	return (
-		<motion.div initial={{x: "-100vw"}} animate={{x: 0}} className="toppings_container">
+		<motion.div variants={containerVariants} initial="hidden" animate="visible" className="toppings_container">
 			<h3 className="heading">Step 2: Choose Your Toppings</h3>
 			<ul className="toppings_options">
 				{toppings.map(topping => {

@@ -13,7 +13,26 @@ const Base = ({addBase, salad}) => {
 		},
 		visible: {
 			opacity: 1,
-			x: 0
+			x: 0,
+			transition: {
+				type: 'spring',
+				duration: .5
+			}
+		}
+	}
+
+	const nextVariants = {
+		hidden: {
+			opacity: 0,
+			scale: 1.1
+		},
+		visible: {
+			opacity: 1,
+			scale: 1,
+			transition: {
+				type: 'spring',
+				duration: .5
+			}
 		}
 	}
 
@@ -35,7 +54,7 @@ const Base = ({addBase, salad}) => {
 			{salad.base && (
 				<div>
 					<Link to={process.env.PUBLIC_URL + "/toppings"}>
-						<motion.button initial={{scale: 1.1}} animate={{scale: 1}} whileHover={{scale: 1.1}} className="base_next_button">Next</motion.button>
+						<motion.button variants={nextVariants} initial="hidden" animate="visible" whileHover={{scale: 1.1}} className="base_next_button">Next</motion.button>
 					</Link>
 				</div>
 			)}
