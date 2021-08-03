@@ -14,7 +14,8 @@ const Order = ({ salad }) => {
 			transition: {
 				type: 'spring',
 				duration: .25,
-				when: "beforeChildren"
+				when: "beforeChildren",
+				staggerChildren: 0.4
 			}
 		}
 	}
