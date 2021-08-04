@@ -12,11 +12,12 @@ const Base = ({addBase, salad}) => {
 			x: '-100vw'
 		},
 		visible: {
-			opacity: 1,
 			x: 0,
+			opacity: 1,
 			transition: {
 				type: 'spring',
-				duration: .5
+				duration: .5,
+				delay: .25
 			}
 		}
 	}
