@@ -1,21 +1,21 @@
 {
   "files": {
-    "main.css": "/superfoo-d/static/css/main.c3b50aaa.chunk.css",
-    "main.js": "/superfoo-d/static/js/main.46e6276d.chunk.js",
-    "main.js.map": "/superfoo-d/static/js/main.46e6276d.chunk.js.map",
+    "main.css": "/superfoo-d/static/css/main.dfb44931.chunk.css",
+    "main.js": "/superfoo-d/static/js/main.b7b0e353.chunk.js",
+    "main.js.map": "/superfoo-d/static/js/main.b7b0e353.chunk.js.map",
     "runtime-main.js": "/superfoo-d/static/js/runtime-main.6b47fa5e.js",
     "runtime-main.js.map": "/superfoo-d/static/js/runtime-main.6b47fa5e.js.map",
-    "static/js/2.1fc46ff7.chunk.js": "/superfoo-d/static/js/2.1fc46ff7.chunk.js",
-    "static/js/2.1fc46ff7.chunk.js.map": "/superfoo-d/static/js/2.1fc46ff7.chunk.js.map",
+    "static/js/2.816ae703.chunk.js": "/superfoo-d/static/js/2.816ae703.chunk.js",
+    "static/js/2.816ae703.chunk.js.map": "/superfoo-d/static/js/2.816ae703.chunk.js.map",
     "index.html": "/superfoo-d/index.html",
-    "static/css/main.c3b50aaa.chunk.css.map": "/superfoo-d/static/css/main.c3b50aaa.chunk.css.map",
-    "static/js/2.1fc46ff7.chunk.js.LICENSE.txt": "/superfoo-d/static/js/2.1fc46ff7.chunk.js.LICENSE.txt",
+    "static/css/main.dfb44931.chunk.css.map": "/superfoo-d/static/css/main.dfb44931.chunk.css.map",
+    "static/js/2.816ae703.chunk.js.LICENSE.txt": "/superfoo-d/static/js/2.816ae703.chunk.js.LICENSE.txt",
     "static/media/salad.0eb62565.svg": "/superfoo-d/static/media/salad.0eb62565.svg"
   },
   "entrypoints": [
     "static/js/runtime-main.6b47fa5e.js",
-    "static/js/2.1fc46ff7.chunk.js",
-    "static/css/main.c3b50aaa.chunk.css",
-    "static/js/main.46e6276d.chunk.js"
+    "static/js/2.816ae703.chunk.js",
+    "static/css/main.dfb44931.chunk.css",
+    "static/js/main.b7b0e353.chunk.js"
   ]
 }
