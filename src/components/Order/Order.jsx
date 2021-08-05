@@ -15,7 +15,7 @@ const Order = ({ salad }) => {
 				type: 'spring',
 				duration: .25,
 				when: "beforeChildren",
-				staggerChildren: 0.4
+				staggerChildren: 0.3
 			}
 		}
 	}

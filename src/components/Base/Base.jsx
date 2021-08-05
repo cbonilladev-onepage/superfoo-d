@@ -38,7 +38,7 @@ const Base = ({addBase, salad}) => {
 	}
 
 	return (
-		<motion.div variants={containerVariants} initial="hidden" animate="visible" className="base_container">
+		<motion.div variants={containerVariants} initial="hidden" animate="visible" exit="exit" className="base_container">
 			<h3 className="heading">Step 1: Choose Your Base</h3>
 
 			<ul className="base_options">

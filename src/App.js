@@ -5,6 +5,7 @@ import './App.css';
 import Base from './components/Base/Base';
 import Header from './components/Header/Header';
 import Home from './components/Home/Home';
+import Modal from './components/Modal/Modal';
 import Order from './components/Order/Order';
 import Seasonings from './components/Seasonings/Seasonings';
 import Toppings from './components/Toppings/Toppings';
@@ -13,6 +14,7 @@ import Toppings from './components/Toppings/Toppings';
 const App = () => {
   const location = useLocation();
   const [salad, setSalad] = useState({ base: "", toppings: [], seasonings: [] });
+  const [showModal, setShowModal] = useState(false)
 
   const addBase = (base) => {
     setSalad({ ...salad, base })
@@ -40,7 +42,8 @@ const App = () => {
 
   return (
     <div className="App">
-      <Header />
+      <Header showModal={showModal} setShowModal={setShowModal}/>
+      <Modal showModal={showModal} setShowModal={setShowModal}/>
       <AnimatePresence initial={false}>
         <Switch location={location} key={location.pathname}>
           <Route path={process.env.PUBLIC_URL + "/"} exact><Home /></Route>

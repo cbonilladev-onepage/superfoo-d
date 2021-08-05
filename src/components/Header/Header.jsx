@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 import { ReactComponent as Salad } from '../../assets/salad.svg'
 import './Header.css'
 
-const Header = () => {
+const Header = ({ showModal, setShowModal }) => {
 	return (
 		<div className="container">
 			<div className="logo">
@@ -16,7 +16,7 @@ const Header = () => {
 					<Link to={process.env.PUBLIC_URL + "/"}>
 						<li>Home</li>
 					</Link>
-				<li>About</li>
+				<li onClick={() => setShowModal(!showModal)}>About</li>
 			</ul>
 		</div>
 	)
